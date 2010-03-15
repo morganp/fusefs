@@ -15,14 +15,14 @@ Requirements
 ------------
 
   * FUSE (http://fuse.sourceforge.org)
-  * Ruby 1.8
+  * Ruby (>= 1.8)
  (* C compiler)
 
 
 Install
 -------
 
-	gem install fizx-fusefs
+	gem install fusefs
 
 Usage
 -----
@@ -43,4 +43,4 @@ License
 
 
 Author: Greg Millam <walker@deafcode.com>.
-Port/Maintainer: Kyle Maxwell <kyle@kylemaxwell.com>
+Port/Maintainer: Shane <shane@duairc.com>

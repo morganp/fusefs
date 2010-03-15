@@ -1253,8 +1253,8 @@ rf_read(const char *path, char *buf, size_t size, off_t offset,
       return 0;
     if (TYPE(ret) != T_STRING)
       return 0;
-    memcpy(buf, RSTRING(ret)->ptr, RSTRING(ret)->len);
-    return RSTRING(ret)->len;
+    memcpy(buf, RSTRING_LEN(ret), RSTRING_LEN(ret));
+    return RSTRING_LEN(ret);
   }
 
   /* Is there anything left to read? */
@@ -1385,7 +1385,7 @@ rf_mount_to(int argc, VALUE *argv, VALUE self) {
 
   for (i = 1; i < argc; i++) {
     cur = StringValuePtr(argv[i]);
-    opts->argv[i] = ALLOC_N(char, RSTRING(argv[i])->len + 2);
+    opts->argv[i] = ALLOC_N(char, RSTRING_LEN(argv[i]) + 2);
     sprintf(opts->argv[i], "-o%s", cur);
   }
 

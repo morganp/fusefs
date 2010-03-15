@@ -4,12 +4,12 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "fusefs-osx"
+    gem.name = "fusefs"
     gem.summary = %Q{fusefs}
     gem.description = %Q{Gemified}
-    gem.email = "kyle@kylemaxwell.com"
-    gem.homepage = "http://github.com/fizx/fusefs"
-    gem.authors = ["Kyle Maxwell"]
+    gem.email = "shane@duairc.com"
+    gem.homepage = "http://github.com/duairc/fusefs"
+    gem.authors = ["Shane"]
     gem.extensions = ["ext/extconf.rb"]
   end
   Jeweler::GemcutterTasks.new
