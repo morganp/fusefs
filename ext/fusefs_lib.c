@@ -1253,7 +1253,7 @@ rf_read(const char *path, char *buf, size_t size, off_t offset,
       return 0;
     if (TYPE(ret) != T_STRING)
       return 0;
-    memcpy(buf, RSTRING_LEN(ret), RSTRING_LEN(ret));
+    memcpy(buf, RSTRING_PTR(ret), RSTRING_LEN(ret));
     return RSTRING_LEN(ret);
   }
 
